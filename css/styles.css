@@ -412,11 +412,6 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-
-/* .portfolio-item:hover .card-overlay {
-  transform: translateY(0%);
-} */
-
 /* ================== /Portfolio section styles ======================= */
 
 /* ==================  Page Footer styles ======================= */
@@ -469,5 +464,10 @@ address {
 
 .social-list-footer {
   gap: 16px;
+}
+
+.link-social-footer:hover,
+.link-social-footer:focus {
+  background-color: #31d0aa;
 }
 /* ==================  /Page Footer styles ======================= */
