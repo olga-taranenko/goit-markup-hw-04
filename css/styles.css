@@ -116,7 +116,7 @@ img {
   position: absolute;
   content: '';
   display: block;
-  bottom: 0px;
+  bottom: -1px;
   border-radius: 2px;
   width: 48px;
   height: 4px;
@@ -162,6 +162,7 @@ address {
     ),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -217,20 +218,15 @@ address {
 }
 
 .benefits-icon-box {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 264px;
   height: 112px;
   background-color: #f4f4fd;
   margin-bottom: 8px;
-}
-
-.benefits-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .benefits-title {
@@ -295,7 +291,7 @@ address {
   gap: 8px;
   justify-content: center;
   align-items: center;
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .team-title {
@@ -317,31 +313,27 @@ address {
 
 .social-list {
   display: flex;
+  justify-content: center;
   gap: 24px;
 }
 
 .social-list-link {
-  display: block;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
+  fill: #f4f4fd;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
-  background-color: #31d0aa;
+  background-color: #404bbf;
 }
 
-.social-list-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  fill: #f4f4fd;
-}
 /* ================== /Team section styles ======================= */
 
 /* ================== Portfolio section styles ======================= */
@@ -364,12 +356,7 @@ address {
 
 .portfolio-item {
   flex-basis: calc((100% - 2 * 24px) / 3);
-}
-
-.portfolio-item:hover {
-  cursor: pointer;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-portfolio {
@@ -383,9 +370,10 @@ address {
   left: 0;
   background-color: #4d5ae5;
   color: #f4f4fd;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 40px 32px;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -393,12 +381,14 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-text {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+.portfolio-item:hover .card-overlay {
+  transform: translateY(0%);
+}
+
+.portfolio-item:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .box-portfolio {
@@ -423,9 +413,9 @@ address {
   letter-spacing: 0.02em;
 }
 
-.portfolio-item:hover .card-overlay {
+/* .portfolio-item:hover .card-overlay {
   transform: translateY(0%);
-}
+} */
 
 /* ================== /Portfolio section styles ======================= */
 
@@ -438,8 +428,11 @@ address {
 
 .footer-box {
   display: flex;
-  justify-content: baseline;
-  gap: 120px;
+  align-items: baseline;
+}
+
+.footer-logo-text {
+  margin-right: 120px;
 }
 
 .logo-footer {
@@ -466,12 +459,11 @@ address {
 }
 
 .title-social-menu {
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
