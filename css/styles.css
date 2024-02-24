@@ -364,7 +364,12 @@ address {
 
 .portfolio-item {
   flex-basis: calc((100% - 2 * 24px) / 3);
-  box-shadow: none;
+}
+
+.portfolio-item:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .card-portfolio {
@@ -420,10 +425,8 @@ address {
 
 .portfolio-item:hover .card-overlay {
   transform: translateY(0%);
-  cursor: pointer;
-  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
+
 /* ================== /Portfolio section styles ======================= */
 
 /* ==================  Page Footer styles ======================= */
